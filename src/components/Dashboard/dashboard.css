@@ -1,0 +1,32 @@
+.question-generator {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.question-generator .col-auto {
+  margin: 1rem;
+  border: none;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  width: auto;
+  box-shadow: 1px 1px 5px 2px rgb(209, 209, 209);
+}
+
+.row-button {
+  text-align: center;
+}
+
+.btn-reload {
+  margin: 0 3rem;
+  margin-bottom: 1rem;
+}
+
+.btn-reload button {
+  background-color: rgb(183, 6, 253);
+  font-weight: 600;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+}

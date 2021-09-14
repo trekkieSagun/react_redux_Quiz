@@ -1,0 +1,16 @@
+   axios
+      .get(
+        `https://opentdb.com/api.php?amount=${this.props.noOfQuestions}&category=${this.props.category}&difficulty=${this.props.difficulty}&type=${this.props.questionType}&encode=base64`
+      )
+      .then((res) => {
+        const newQuestions = res.data.results;
+        newQuestions.forEach((q) => {
+          q.answers = [q.correct_answer, ...q.incorrect_answers];
+          q.answers = this.shuffle(q.answers);
+        });
+        this.setState({
+          isLoading: false,
+        });
+        this.props.loadQuestions(newQuestions);
+      });
+  };
